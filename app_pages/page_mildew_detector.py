@@ -22,7 +22,7 @@ def page_mildew_detector_body():
         f"* You can download a set of parasitised and uninfected leaves "
         f"  for live prediction. "
         f"  You can download the images from "
-        f"[here](https: // www.kaggle.com/codeinstitute/cherry-leaves)"
+        f"[here](https://www.kaggle.com/codeinstitute/cherry-leaves)"
     )
 
     st.write(
