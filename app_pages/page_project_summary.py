@@ -8,10 +8,10 @@ def page_summary_body():
     st.info(
         f"**General Information**\n"
         f"* Powdery mildew is a fungal disease that affects a wide range of "
-        f"*plants. This disease can grow well in environments with high "
+        f"plants. This disease can grow well in environments with high "
         f"humidity and moisture.\n"
-        f"*Cherry leaves are used and examined for this study."
-        f"*Visual criteria are used to detect the existence "
+        f"Cherry leaves are used and examined for this study. "
+        f"Visual criteria are used to detect the existence "
         f"of powdery mildew on the leaves. \n"
         f"* According to [Wikipedia]"
         f"(https://en.wikipedia.org/wiki/Powdery_mildew), "
@@ -39,5 +39,5 @@ def page_summary_body():
         f"a cherry leaf that contains powdery mildew or a "
         f"healthy one visually.\n"
         f"* 2 - The client is interested to tell whether a given leaf contains"
-        f" *powdery mildew or not."
+        f" powdery mildew or not."
     )
