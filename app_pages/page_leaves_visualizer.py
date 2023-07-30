@@ -41,13 +41,13 @@ def displays_avg_var_images(version):
 
     st.success(
         f"After careful observation, we have identified a significant visual"
-        f"difference in consistent coloring between healthy and infected"
-        f"leaves. The average and variability images of infected leaves"
-        f"exhibit more prominent white color blotches on their surface"
-        f"compared to healthy leaves, which are characterized by a greenish"
-        f"uniform coloring. However, it is worth noting that the average and"
-        f"variability images did not reveal any clear patterns that could"
-        f"intuitively differentiate infected leaves from healthy leaves."
+        f" difference in consistent coloring between healthy and infected"
+        f" leaves. The average and variability images of infected leaves"
+        f" exhibit more prominent white color blotches on their surface"
+        f" compared to healthy leaves, which are characterized by a greenish"
+        f" uniform coloring. However, it is worth noting that the average and"
+        f" variability images did not reveal any clear patterns that could"
+        f" intuitively differentiate infected leaves from healthy leaves."
     )
 
     st.image(avg_var_healthy, caption='Healthy leaves-average and variable')
@@ -62,14 +62,14 @@ def display_diff_between_avg_images(version):
     and average infected image
     """
     st.subheader(f"Difference between average healthy"
-                 f"and average infected leaves")
+                 f" and average infected leaves")
 
     diff_between_avgs = plt.imread(f"outputs/{version}/avg_diff.png")
 
     st.success(f"We observe a similar pattern here, where the healthy leaves"
-               f"have a clearer, green surface, and the infected ones display"
-               f"more white color on the surface."
-               f"However, comparing both kinds of leaves remains challenging."
+               f" have a clearer, green surface, and the infected ones display"
+               f" more white color on the surface."
+               f" However, comparing both kinds of leaves remains challenging."
                )
 
     st.image(diff_between_avgs, caption="Difference between average images")

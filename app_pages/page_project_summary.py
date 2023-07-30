@@ -38,5 +38,5 @@ def page_summary_body():
         f"a cherry leaf that contains powdery mildew or a "
         f"healthy one visually.\n"
         f"* 2 - The client is interested to tell whether a given leaf contains"
-        f"*powdery mildew or not."
+        f" *powdery mildew or not."
     )
