@@ -80,6 +80,38 @@ As a client, I seek a predictive capability that can determine whether a given c
 
 1. Quick project summary
    On this page we can find general information about the roject, the dataset summary and the business requirements.
+![Project Summary](https://github.com/23052015/PP5-mildew-detection-in-cherry-leaves/assets/109954194/71918cf2-ef14-455a-a835-8e01e8bed22e)
+
+2. Cherry Leaf Visualizer
+  #### Business requirement 1
+![Cherrry Leaves Visualizer ](https://github.com/23052015/PP5-mildew-detection-in-cherry-leaves/assets/109954194/4a50002e-3a9f-46bb-adbb-a3e103de522e)
+  * This page visualizes the difference between:
+     healthy average/variable and infected average/variable
+![Difference btw average healthy and average infected](https://github.com/23052015/PP5-mildew-detection-in-cherry-leaves/assets/109954194/46e21efd-f573-432a-9ca2-cd27f32cedaf)
+
+  * Image Montage(healthy)
+![Image montage (healthy)](https://github.com/23052015/PP5-mildew-detection-in-cherry-leaves/assets/109954194/bb656a2f-1864-4ea5-a747-ce65d1b66aec)
+
+  * Image Montage(infected)
+![Image montage powdery mildew](https://github.com/23052015/PP5-mildew-detection-in-cherry-leaves/assets/109954194/83269313-42c7-4d8b-8d01-ae94384a8192)
+
+3. Mildew Detector
+#### Business Requirement 2:
+  The application must include the following features:
+* Link to Download Images: Users should be able to download a collection of images containing both healthy and unhealthy leaves. These images will be used for live predictions.* User Interface with File Uploader: The application should have a user-friendly interface with a file uploader widget. Users can upload images of leaves, and the uploaded image will be displayed along with a prediction statement indicating whether the leaf is healthy or unhealthy.
+* Prediction Table: A table will be provided that lists the names of the uploaded images along with the corresponding prediction results (healthy or unhealthy).
+* Download Button for Table: The application should have a download button that allows users to download the prediction table for future reference or analysis.
+![Analysis healthy 1](https://github.com/23052015/PP5-mildew-detection-in-cherry-leaves/assets/109954194/cae0f5b2-4c96-4a9f-84b0-23853d981ad2)
+![Analysis healthy 2](https://github.com/23052015/PP5-mildew-detection-in-cherry-leaves/assets/109954194/1a97f79f-0e7a-42ba-9be6-d191ddba8cb7)
+![Analysis infected 1](https://github.com/23052015/PP5-mildew-detection-in-cherry-leaves/assets/109954194/d8e4e444-2ac5-4f31-9d98-08239724c2e7)
+![Analysis infected 2](https://github.com/23052015/PP5-mildew-detection-in-cherry-leaves/assets/109954194/26e7fcc6-1aec-40e8-a78f-2fdd8de3d8a0)
+
+4. Project hypothesis
+   This page shows the project hypothesis and how it is validated across the project
+![Project hypothesis](https://github.com/23052015/PP5-mildew-detection-in-cherry-leaves/assets/109954194/4e859979-c32f-442d-aac2-dfc16414d6da)
+
+5. Model performance metrics
+   This page shows the technical part of the model performance. The bar graph illustrates the distribution of images across different labels in the train, validate, and test datasets. The line    graphs depict a normal learning curve by displaying accuracy and loss plots. Additionally, the last table provides a tabular representation of the same information. The machine learning        model exhibits excellent performance with a remarkable accuracy of 99%.
 
 ## Unfixed Bugs
 
