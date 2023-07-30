@@ -1,40 +1,28 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-## Codeanywhere Template Instructions
+# Mildew Detection in Cherry Leaves
 
-Welcome,
+---
 
-This is the Code Institute student template for Codeanywhere. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions. Click the `Use this template` button above to get started.
+The created app is a powerful application that can accurately predict whether cherry leaves are healthy or infected with powdery mildew. By analyzing an image of a cherry leaf, the app employs a sophisticated machine learning model for supervised, single-label, binary classification. Through this binary classifier, the app determines whether the leaf is healthy or afflicted with the disease, providing users with valuable insights into the condition of their cherry trees. 
+- [Mildew Detection in Cherry Leaves](#mildew-detection-in-cherry-leaves)
+  - [Cloud IDE Reminders](#cloud-ide-reminders)
+  - [Dataset Content](#dataset-content)
+  - [Business Requirements](#business-requirements)
+  - [Hypothesis and how to validate?](#hypothesis-and-how-to-validate)
+  - [The rationale to map the business requirements to the Data Visualisations and ML tasks](#the-rationale-to-map-the-business-requirements-to-the-data-visualisations-and-ml-tasks)
+    - [Business Requirement 1: Data Visualization](#business-requirement-1-data-visualization)
+    - [Business Requirement 2:](#business-requirement-2)
+  - [ML Business Case](#ml-business-case)
+  - [Dashboard Design](#dashboard-design)
+  - [Unfixed Bugs](#unfixed-bugs)
+  - [Deployment](#deployment)
+    - [Heroku](#heroku)
+  - [Main Data Analysis and Machine Learning Libraries](#main-data-analysis-and-machine-learning-libraries)
+  - [Credits](#credits)
+    - [Content](#content)
+    - [Media](#media)
+  - [Acknowledgements (optional)](#acknowledgements-optional)
 
-You can safely delete the Codeanywhere Template Instructions section of this README.md file,  and modify the remaining paragraphs for your own project. Please do read the Codeanywhere Template Instructions at least once, though! It contains some important information about the IDE and the extensions we use. 
-
-## How to use this repo
-
-1. Use this template to create your GitHub project repo
-
-1. Log into <a href="https://app.codeanywhere.com/" target="_blank" rel="noreferrer">CodeAnywhere</a> with your GitHub account.
-
-1. On your Dashboard, click on the New Workspace button
-
-1. Paste in the URL you copied from GitHub earlier
-
-1. Click Create
-
-1. Wait for the workspace to open. This can take a few minutes.
-
-1. Open a new terminal and <code>pip3 install -r requirements.txt</code>
-
-1. In the terminal type <code>pip3 install jupyter</code>
-
-1. In the terminal type <code>jupyter notebook --NotebookApp.token='' --NotebookApp.password=''</code> to start the jupyter server.
-
-1. Open port 8888 preview or browser
-
-1. Open the jupyter_notebooks directory in the jupyter webpage that has opened and click on the notebook you want to open.
-
-1. Click the button Not Trusted and choose Trust.
-
-Note that the kernel says Python 3. It inherits from the workspace so it will be Python-3.8.12 as installed by our template. To confirm this you can use <code>! python --version</code> in a notebook code cell.
 
 
 ## Cloud IDE Reminders
@@ -52,7 +40,7 @@ You can now use the `heroku` CLI program - try running `heroku apps` to confirm 
 
 ## Dataset Content
 * The dataset is sourced from [Kaggle](https://www.kaggle.com/codeinstitute/cherry-leaves). We then created a fictitious user story where predictive analytics can be applied in a real project in the workplace.
-* The dataset contains +4 thousand images taken from the client's crop fields. The images show healthy cherry leaves and cherry leaves that have powdery mildew, a fungal disease that affects many plant species. The cherry plantation crop is one of the finest products in their portfolio, and the company is concerned about supplying the market with a compromised quality product.
+* The dataset contains +4 thousand images taken from the client's crop fields. The images show healthy cherry leaves and cherry leaves that have powdery mildew, a      fungal disease that affects many plant species. The cherry plantation crop is one of the finest products in their portfolio, and the company is concerned about supplying the market with a compromised quality product.
 
 
 
@@ -67,15 +55,26 @@ To save time in this process, the IT team suggested an ML system that detects in
 
 
 ## Hypothesis and how to validate?
-* List here your project hypothesis(es) and how you envision validating it (them).
+- Our observations indicate that powdery mildew leaves exhibit distinct marks and signs. Typically, these marks manifest as light, roughly-circular, powdery patches on young and susceptible leaves with light green expanding foliage, making them distinguishable from healthy leaves.
+- Upon analyzing the Image Montage, it is evident that powdery mildew leaves commonly feature fine white marks throughout their surface. However, when studying the Average Image, Variability Image, and Difference between Averages, we did not find any definitive pattern that could be used to differentiate one from another.
+
 
 
 ## The rationale to map the business requirements to the Data Visualisations and ML tasks
-* List your business requirements and a rationale to map them to the Data Visualisations and ML tasks.
+### Business Requirement 1: Data Visualization
+As a client, I require the ability to visualize "mean" and "standard deviation" images for both healthy cherry leaves and cherry leaves containing powdery mildew. This visualization will allow me to easily differentiate between the two types of cherry leaves. Additionally, I need to view the differences between an average healthy cherry leaf and an average cherry leaf with powdery mildew, aiding me in visually distinguishing between them. Lastly, I would like to have an image montage showcasing healthy cherry leaves and those with powdery mildew, further facilitating visual differentiation.
+### Business Requirement 2:
+As a client, I seek a predictive capability that can determine whether a given cherry leaf is healthy or affected by powdery mildew. To achieve this, I require the development of a robust machine learning (ML) model capable of generating accurate predictions. Furthermore, I need the ML model to generate comprehensive reports, providing valuable insights and analysis regarding the classification results.
+
 
 
 ## ML Business Case
-* In the previous bullet, you potentially visualised an ML task to answer a business requirement. You should frame the business case using the method we covered in the course.
+1. Business Objective: Our primary goal is to develop a method/tool that enhances the accuracy and efficiency of evaluating cherry leaves infected with powdery mildew compared to healthy leaves.
+2. Customer Dashboard: The customer seeks a user-friendly dashboard with image upload functionality. The dashboard will leverage machine learning to rapidly determine if a leaf image represents a healthy leaf or one infected with powdery mildew, achieving an impressive accuracy of 97%.
+3. Data Privacy: The customer emphasizes the need for strict data privacy to safeguard their proprietary information. To prevent competitors from replicating their cherry leaf production, internal data will remain confidential and undisclosed.
+4. ML Model Training: The ML tool will be trained using input images of both healthy and infected cherry leaves. Its objective is to discern the distinctions between the two types of leaves effectively. The desired outcome is an ML model with 97% accuracy, capable of determining if an uploaded leaf image is healthy or infected.
+5. Conventional Data Analysis: In addition to the ML-based approach, conventional data analysis techniques can also be employed to visually inspect and differentiate leaf images, aiding in the identification of healthy and powdery mildew-infected leaves.
+
 
 
 ## Dashboard Design
@@ -102,26 +101,40 @@ To save time in this process, the IT team suggested an ML system that detects in
 
 
 ## Main Data Analysis and Machine Learning Libraries
-* Here you should list the libraries used in the project and provide an example(s) of how you used these libraries.
+* Numpy is a powerful library used to handle multi-dimensional arrays and offers an extensive collection of mathematical functions to perform operations on these arrays efficiently.
+* Pandas is a valuable tool for data analysis, facilitating statistical analysis and manipulation of datasets.
+* Matplotlib is primarily used for data visualization and enables the embedding of plots within Jupyter notebooks.
+* Seaborn provides a high-level interface for creating statistical graphics, offering built-in themes to style Matplotlib plots elegantly.
+* Plotly is well-suited for plotting data, adding interactivity and animation to data visualizations.
+* Scikit-learn contains a comprehensive suite of tools for predictive analysis, enabling the training of machine learning models for classification and clustering tasks.
+* TensorFlow is a popular library utilized to iteratively optimize models during training by employing an optimizer and loss function.
+* Keras serves as a user-friendly Python interface for building artificial neural networks.
+* Itertools is valuable for efficiently iterating over data structures that can be traversed using a for-loop.
+* Random is commonly used to generate random numbers, which is often necessary for various algorithms and simulations.
+
 
 
 ## Credits 
 
-* In this section, you need to reference where you got your content, media and from where you got extra help. It is common practice to use code from other repositories and tutorials. However, it is necessary to be very specific about these sources to avoid plagiarism. 
-* You can break the credits section up into Content and Media, depending on what you have included in your project. 
-
+- [Code Institute Malaria Walkthrough Project](https://github.com/Code-Institute-Solutions/WalkthroughProject01) was extensively used to create this project.
+- [Mildew Detection in Cherry leaves MilestonePP5](https://github.com/ssreelakshmi88/mildew-detection-cherry-leaves_milestonePP5) was a great help in order to get see how a succesfull implementation of this project looks like.
+- [Mildew Detection Project](https://github.com/Erik1007/mildew-detection-project) was also used as a reference for this project. 
+- I want to express my gratitude towards my Mentor Rohit Sharma for his support and guideness throughout this project.
+- Code Institute Student support was very kind for granting 1 day extension of the deadline for this project.
+- Slack community and especially Niel McEwen for his support in troubleshooting. 
+- 
 ### Content 
 
-- The text for the Home page was taken from Wikipedia Article A.
-- Instructions on how to implement form validation on the Sign-Up page were taken from [Specific YouTube Tutorial](https://www.youtube.com/).
-- The icons in the footer were taken from [Font Awesome](https://fontawesome.com/).
+- Minor parts about the powdery mildew disease have been taken from 
+  [Wikipedia](https://en.wikipedia.org/wiki/Powdery_mildew) 
+- Other parts are well known by myself since I have a wineyard which (depends
+  on the season) faces this problem. 
 
 ### Media
 
-- The photos used on the home and sign-up page are from This Open-Source site.
-- The images used for the gallery page were taken from this other open-source site.
+* The cherry leaves images dataset was taken from [Kaggle](https://www.kaggle.com/datasets/codeinstitute/cherry-leaves)
 
 
 
 ## Acknowledgements (optional)
-* Thank the people that provided support throughout this project.
+* - I want to express my gratitude towards my Mentor Rohit Sharma for his support and guideness throughout this project.
