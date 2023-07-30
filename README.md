@@ -11,19 +11,18 @@ The created app is a powerful application that can accurately predict whether ch
   - [Business Requirements](#business-requirements)
   - [Hypothesis and how to validate?](#hypothesis-and-how-to-validate)
   - [The rationale to map the business requirements to the Data Visualisations and ML tasks](#the-rationale-to-map-the-business-requirements-to-the-data-visualisations-and-ml-tasks)
-    - [Business Requirement 1: Data Visualization](#business-requirement-1-data-visualization)
+    - [Business Requirement 1](#business-requirement-1)
     - [Business Requirement 2](#business-requirement-2)
   - [ML Business Case](#ml-business-case)
   - [Dashboard Design](#dashboard-design)
-        - [The app is separated in 5 large sections](#the-app-is-separated-in-5-large-sections)
-  - [Unfixed Bugs](#unfixed-bugs)
+  - [Fixed Bugs](#fixed-bugs)
   - [Deployment](#deployment)
-    - [Heroku](#heroku)
+  - [Steps to run the browser in the workspace using codeanywhere](#steps-to-run-the-browser-in-the-workspace-using-codeanywhere)
   - [Main Data Analysis and Machine Learning Libraries](#main-data-analysis-and-machine-learning-libraries)
   - [Credits](#credits)
     - [Content](#content)
     - [Media](#media)
-  - [Acknowledgements (optional)](#acknowledgements-optional)
+  - [Future improvements to increase the app potential](#future-improvements-to-increase-the-app-potential)
 
 ## Cloud IDE Reminders
 
@@ -39,7 +38,8 @@ You can now use the `heroku` CLI program - try running `heroku apps` to confirm 
 
 ## Dataset Content
 
-* The dataset is sourced from [Kaggle](https://www.kaggle.com/codeinstitute/cherry-leaves). We then created a fictitious user story where predictive analytics can be applied in a real project in the workplace.
+- The dataset is sourced from [Kaggle](https://www.kaggle.com/codeinstitute/cherry-leaves). We then created a fictitious user story where predictive analytics can be applied in a real project in the workplace.
+
 - The dataset contains +4 thousand images taken from the client's crop fields. The images show healthy cherry leaves and cherry leaves that have powdery mildew, a      fungal disease that affects many plant species. The cherry plantation crop is one of the finest products in their portfolio, and the company is concerned about supplying the market with a compromised quality product.
 
 ## Business Requirements
@@ -58,7 +58,7 @@ To save time in this process, the IT team suggested an ML system that detects in
 
 ## The rationale to map the business requirements to the Data Visualisations and ML tasks
 
-### Business Requirement 1: Data Visualization
+### Business Requirement 1
 
 As a client, I require the ability to visualize "mean" and "standard deviation" images for both healthy cherry leaves and cherry leaves containing powdery mildew. This visualization will allow me to easily differentiate between the two types of cherry leaves. Additionally, I need to view the differences between an average healthy cherry leaf and an average cherry leaf with powdery mildew, aiding me in visually distinguishing between them. Lastly, I would like to have an image montage showcasing healthy cherry leaves and those with powdery mildew, further facilitating visual differentiation.
 
@@ -76,31 +76,37 @@ As a client, I seek a predictive capability that can determine whether a given c
 
 ## Dashboard Design
 
-##### The app is separated in 5 large sections
+The app is separated in 5 large sections
 
 1. Quick project summary
    On this page we can find general information about the roject, the dataset summary and the business requirements.
 ![Project Summary](https://github.com/23052015/PP5-mildew-detection-in-cherry-leaves/assets/109954194/71918cf2-ef14-455a-a835-8e01e8bed22e)
 
 2. Cherry Leaf Visualizer
-  #### Business requirement 1
+
+**Business requirement 1**
+
 ![Cherrry Leaves Visualizer ](https://github.com/23052015/PP5-mildew-detection-in-cherry-leaves/assets/109954194/4a50002e-3a9f-46bb-adbb-a3e103de522e)
-  * This page visualizes the difference between:
+
+- This page visualizes the difference between:
      healthy average/variable and infected average/variable
 ![Difference btw average healthy and average infected](https://github.com/23052015/PP5-mildew-detection-in-cherry-leaves/assets/109954194/46e21efd-f573-432a-9ca2-cd27f32cedaf)
 
-  * Image Montage(healthy)
+- Image Montage(healthy)
 ![Image montage (healthy)](https://github.com/23052015/PP5-mildew-detection-in-cherry-leaves/assets/109954194/bb656a2f-1864-4ea5-a747-ce65d1b66aec)
 
-  * Image Montage(infected)
+- Image Montage(infected)
 ![Image montage powdery mildew](https://github.com/23052015/PP5-mildew-detection-in-cherry-leaves/assets/109954194/83269313-42c7-4d8b-8d01-ae94384a8192)
 
 3. Mildew Detector
-#### Business Requirement 2:
+
+**Business Requirement 2**
+
   The application must include the following features:
-* Link to Download Images: Users should be able to download a collection of images containing both healthy and unhealthy leaves. These images will be used for live predictions.* User Interface with File Uploader: The application should have a user-friendly interface with a file uploader widget. Users can upload images of leaves, and the uploaded image will be displayed along with a prediction statement indicating whether the leaf is healthy or unhealthy.
-* Prediction Table: A table will be provided that lists the names of the uploaded images along with the corresponding prediction results (healthy or unhealthy).
-* Download Button for Table: The application should have a download button that allows users to download the prediction table for future reference or analysis.
+
+- Link to Download Images: Users should be able to download a collection of images containing both healthy and unhealthy leaves. These images will be used for live predictions.* User Interface with File Uploader: The application should have a user-friendly interface with a file uploader widget. Users can upload images of leaves, and the uploaded image will be displayed along with a prediction statement indicating whether the leaf is healthy or unhealthy.
+- Prediction Table: A table will be provided that lists the names of the uploaded images along with the corresponding prediction results (healthy or unhealthy).
+- Download Button for Table: The application should have a download button that allows users to download the prediction table for future reference or analysis.
 ![Analysis healthy 1](https://github.com/23052015/PP5-mildew-detection-in-cherry-leaves/assets/109954194/cae0f5b2-4c96-4a9f-84b0-23853d981ad2)
 ![Analysis healthy 2](https://github.com/23052015/PP5-mildew-detection-in-cherry-leaves/assets/109954194/1a97f79f-0e7a-42ba-9be6-d191ddba8cb7)
 ![Analysis infected 1](https://github.com/23052015/PP5-mildew-detection-in-cherry-leaves/assets/109954194/d8e4e444-2ac5-4f31-9d98-08239724c2e7)
@@ -113,13 +119,13 @@ As a client, I seek a predictive capability that can determine whether a given c
 5. Model performance metrics
    This page shows the technical part of the model performance. The bar graph illustrates the distribution of images across different labels in the train, validate, and test datasets. The line    graphs depict a normal learning curve by displaying accuracy and loss plots. Additionally, the last table provides a tabular representation of the same information. The machine learning        model exhibits excellent performance with a remarkable accuracy of 99%.
 
-## Unfixed Bugs
+## Fixed Bugs
 
-* You will need to mention unfixed bugs and why they were unfixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a significant variable for consideration, paucity of time and difficulty understanding implementation is not a valid reason to leave bugs unfixed.
+- When the app was deployed it was originally a fail due to the fact that the stack does not support the used python version. This was fixed ba setting the stack of    the project through codeanywhere workspace from 22 to 20.
 
 ## Deployment
 
-### Heroku
+**Heroku**
 
 - The App live link is: <https://YOUR_APP_NAME.herokuapp.com/>
 - Set the runtime.txt Python version to a [Heroku-20](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version.
@@ -132,9 +138,17 @@ As a client, I seek a predictive capability that can determine whether a given c
 5. The deployment process should happen smoothly if all deployment files are fully functional. Click now the button Open App on the top of the page to access your App.
 6. If the slug size is too large then add large files not required for the app to the .slugignore file.
 
+## Steps to run the browser in the workspace using codeanywhere
+
+- Open the codeanywhere Workspace
+
+- Open a new terminal
+- Write in the terminal "streamlit run app.py" and a port will open which would show the code in the browser
+
 ## Main Data Analysis and Machine Learning Libraries
 
-* Numpy: aA powerful library used to handle multi-dimensional arrays and offers an extensive collection of mathematical functions to perform operations on these arrays efficiently.
+- Numpy: aA powerful library used to handle multi-dimensional arrays and offers an extensive collection of mathematical functions to perform operations on these arrays efficiently.
+
 - Pandas: A valuable tool for data analysis, facilitating statistical analysis and manipulation of datasets.
 - Matplotlib: Primarily used for data visualization and enables the embedding of plots within Jupyter notebooks.
 - Seaborn: Provides a high-level interface for creating statistical graphics, offering built-in themes to style Matplotlib plots elegantly.
@@ -148,11 +162,12 @@ As a client, I seek a predictive capability that can determine whether a given c
 ## Credits
 
 - [Code Institute Malaria Walkthrough Project](https://github.com/Code-Institute-Solutions/WalkthroughProject01) was extensively used to create this project.
+  The complete design and almost the complete code has been taken from Malaria Walkthrough Project.
 - [Mildew Detection in Cherry leaves MilestonePP5](https://github.com/ssreelakshmi88/mildew-detection-cherry-leaves_milestonePP5) was a great help in order to get see how a succesfull implementation of this project looks like.
 - [Mildew Detection Project](https://github.com/Erik1007/mildew-detection-project) was also used as a reference for this project.
 - Code Institute Student support was very kind for granting 1 day extension of the deadline for this project.
 - Slack community and especially Niel McEwen for his support in troubleshooting.
--
+- I want to express my gratitude towards my Mentor Rohit Sharma for his support and guideness throughout this project.
 
 ### Content
 
@@ -165,5 +180,11 @@ As a client, I seek a predictive capability that can determine whether a given c
 
 - The cherry leaves images dataset was taken from [Kaggle](https://www.kaggle.com/datasets/codeinstitute/cherry-leaves)
 
-## Acknowledgements (optional)
-  * - I want to express my gratitude towards my Mentor Rohit Sharma for his support and guideness throughout this project.
+## Future improvements to increase the app potential
+
+- Since I have my own wineyard and know that humid and rainy weather increase the chance of infection by powdery mildew, the app could be upgraded
+  in that way that sensors which measure humidity are placed in the area where cherry trees are placed and connected with the app to issue
+  warnings about increased possibility of infection by powdery mildew so that the client could react properly by treating the trees with fungicides or/and
+  implement other measures (sanitation, pruning etc.).
+  
+- A leaf scanner/camera mounted on a vehicle and connected with the app (for example tractor/low flying drone) which could scan large amount of trees in a short period of time.
