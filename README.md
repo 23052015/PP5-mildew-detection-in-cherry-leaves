@@ -6,8 +6,8 @@
 The created app is a powerful application that can accurately predict whether cherry leaves are healthy or infected with powdery mildew. By analyzing an image of a cherry leaf, the app employs a sophisticated machine learning model for supervised, single-label, binary classification. Through this binary classifier, the app determines whether the leaf is healthy or afflicted with the disease, providing users with valuable insights into the condition of their cherry trees.
 
 - [Mildew Detection in Cherry Leaves](#mildew-detection-in-cherry-leaves)
-  - [Cloud IDE Reminders](#cloud-ide-reminders)
   - [Dataset Content](#dataset-content)
+  - [How to use the app](#how-to-use-the-app)
   - [Business Requirements](#business-requirements)
   - [Hypothesis and how to validate?](#hypothesis-and-how-to-validate)
   - [The rationale to map the business requirements to the Data Visualisations and ML tasks](#the-rationale-to-map-the-business-requirements-to-the-data-visualisations-and-ml-tasks)
@@ -24,23 +24,31 @@ The created app is a powerful application that can accurately predict whether ch
     - [Media](#media)
   - [Future improvements to increase the app potential](#future-improvements-to-increase-the-app-potential)
 
-## Cloud IDE Reminders
 
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public then you can create a new one with *Regenerate API Key*.
 
 ## Dataset Content
 
 - The dataset is sourced from [Kaggle](https://www.kaggle.com/codeinstitute/cherry-leaves). We then created a fictitious user story where predictive analytics can be applied in a real project in the workplace.
 
-- The dataset contains +4 thousand images taken from the client's crop fields. The images show healthy cherry leaves and cherry leaves that have powdery mildew, a      fungal disease that affects many plant species. The cherry plantation crop is one of the finest products in their portfolio, and the company is concerned about supplying the market with a compromised quality product.
+- The dataset contains +4 thousand images taken from the client's crop fields. The images show healthy cherry leaves and cherry leaves that have powdery mildew, a fungal disease that affects many plant species. The cherry plantation crop is one of the finest products in their portfolio, and the company is concerned about supplying the market with a compromised quality product.
+
+## How to use the app
+- To open the app click [here](https://mildew-detection-in-cherry-aff6eea92879.herokuapp.com/)
+- The first page to open is quick project summary.
+ ![Project Summary](https://github.com/23052015/PP5-mildew-detection-in-cherry-leaves/assets/109954194/337b7bcb-3605-49c4-a326-dfef2bfc38b2)
+- The next page down is Cherry Leaf Visualizer, you can oppen the page by clicking on the button beside the title.
+ ![Screenshot 2023-07-31 020008](https://github.com/23052015/PP5-mildew-detection-in-cherry-leaves/assets/109954194/38a37962-ca6e-4b8c-9f84-fde381c28d96)
+- Below is the mildew detector page.
+ ![Screenshot 2023-07-31 020159](https://github.com/23052015/PP5-mildew-detection-in-cherry-leaves/assets/109954194/9e7c1a92-35c0-459e-b486-5bc5d970b6ba)
+    * To test the mildew detector you can upload an image(first download an image from the kaggle dataset and save it as .png) Afterwards click on the "Browse files" button to upload the
+      same image and app will tell you whether the sample is healthy or infected with powdery mildew and download the report by clicking on the link "Download report"
+  ![Analysis healthy 1](https://github.com/23052015/PP5-mildew-detection-in-cherry-leaves/assets/109954194/f243a806-ebed-479f-b927-0efa452081f0)
+  ![Analysis healthy 2](https://github.com/23052015/PP5-mildew-detection-in-cherry-leaves/assets/109954194/200dfa13-3773-4cd7-9d4a-e6eb9e609711)
+- The next page is project hypothesis
+  ![Project hypothesis](https://github.com/23052015/PP5-mildew-detection-in-cherry-leaves/assets/109954194/25dbf903-946a-4a4c-bca6-727bdaaacf77)
+- On the last page you can view the ML performance metrics of the model
+![ML performance metric 1](https://github.com/23052015/PP5-mildew-detection-in-cherry-leaves/assets/109954194/44d1b02a-7a0a-4a89-859b-d969ddc77b83)
+![ML performance metric 2](https://github.com/23052015/PP5-mildew-detection-in-cherry-leaves/assets/109954194/878b6eb6-3d54-43dc-8ecc-8ea22c99d0df)
 
 ## Business Requirements
 
@@ -118,6 +126,8 @@ The app is separated in 5 large sections
 
 5. Model performance metrics
    This page shows the technical part of the model performance. The bar graph illustrates the distribution of images across different labels in the train, validate, and test datasets. The line    graphs depict a normal learning curve by displaying accuracy and loss plots. Additionally, the last table provides a tabular representation of the same information. The machine learning        model exhibits excellent performance with a remarkable accuracy of 99%.
+![ML performance metric 1](https://github.com/23052015/PP5-mildew-detection-in-cherry-leaves/assets/109954194/623b00f5-bb26-4b11-a37b-26c3143954b1)
+![ML performance metric 2](https://github.com/23052015/PP5-mildew-detection-in-cherry-leaves/assets/109954194/d2c027b0-6c18-47a5-bd0a-0283718e26f3)
 
 ## Fixed Bugs
 
